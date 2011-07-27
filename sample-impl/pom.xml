@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <groupId>com.github.kevinpollet.sample</groupId>
+      <artifactId>sample-parent</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <relativePath>../pom.xml</relativePath>
+   </parent>
+
+   <groupId>com.github.kevinpollet.sample</groupId>
+   <artifactId>sample-impl</artifactId>
+   <version>1.0-SNAPSHOT</version>
+
+   <description>This is api implementation</description>
+
+   <dependencies>
+      <!-- API -->
+      <dependency>
+         <groupId>com.github.kevinpollet.sample</groupId>
+         <artifactId>sample-api</artifactId>
+         <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <!-- Log -->
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+         <version>0.9.26</version>
+      </dependency>
+
+      <!-- Test dependencies -->
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>com.github.kevinpollet.sample</groupId>
+         <artifactId>sample-tck</artifactId>
+         <version>1.0-SNAPSHOT</version>
+         <classifier>tests</classifier>
+         <scope>test</scope>
+      </dependency>
+   </dependencies>
+   <build>
+      <plugins>
+         <!-- Unpack the TCK tests, I think it's better if the TCK tests
+          are executed in a separate project -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>unpack-dependencies</goal>
+                  </goals>
+                  <configuration>
+                     <outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+                     <includeArtifactIds>sample-tck</includeArtifactIds>
+                     <includeScope>test</includeScope>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+</project>
