@@ -13,10 +13,10 @@
    </parent>
 
    <groupId>com.github.kevinpollet.sample</groupId>
-   <artifactId>sample-tck</artifactId>
+   <artifactId>sample-tck-testng</artifactId>
    <version>1.0-SNAPSHOT</version>
 
-   <description>This is the TCK</description>
+   <description>This is the TCK using testng</description>
 
    <dependencies>
       <!-- API -->
@@ -35,8 +35,8 @@
 
       <!-- Test dependencies -->
       <dependency>
-         <groupId>junit</groupId>
-         <artifactId>junit</artifactId>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
          <scope>test</scope>
       </dependency>
    </dependencies>

@@ -15,9 +15,10 @@
    </properties>
 
    <modules>
-      <module>sample-tck</module>
-      <module>sample-impl</module>
       <module>sample-api</module>
+      <module>sample-tck-junit</module>
+      <module>sample-tck-testng</module>
+      <module>sample-impl</module>
    </modules>
 
    <dependencyManagement>
@@ -26,6 +27,13 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.8.2</version>
+            <scope>test</scope>
+         </dependency>
+         <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>5.14.6</version>
+            <scope>test</scope>
          </dependency>
       </dependencies>
    </dependencyManagement>
