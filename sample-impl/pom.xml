@@ -62,7 +62,7 @@
                   <artifactId>maven-surefire-plugin</artifactId>
                   <configuration>
                      <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/src/test/resources/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>${project.basedir}/src/test/resources/tck-tests.xml</suiteXmlFile>
                      </suiteXmlFiles>
                   </configuration>
                </plugin>
