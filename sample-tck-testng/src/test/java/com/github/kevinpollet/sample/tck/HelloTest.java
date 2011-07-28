@@ -32,4 +32,9 @@ public class HelloTest {
 
       Assert.assertEquals("Hello", implToTest.sayHello());
    }
+
+   @Test
+   public void testDummy() {
+      Assert.assertTrue(false);
+   }
 }

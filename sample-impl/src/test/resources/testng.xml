@@ -2,7 +2,11 @@
 <suite name="Tck-Suite">
    <test name="HelloTest">
       <classes>
-         <class name="com.github.kevinpollet.sample.tck.HelloTest"/>
+         <class name="com.github.kevinpollet.sample.tck.HelloTest">
+            <methods>
+               <exclude name="testDummy"/>
+            </methods>
+         </class>
       </classes>
    </test>
 </suite>
