@@ -25,8 +25,8 @@ TCK Sample
 
 * TestNG
 	* To build this project and run the TCK tests with TestNG execute the following command `mvn clean install`
-    * With TestNG the TCK tests are enabled with the file `testng.xml`
+   * With TestNG the TCK tests are enabled with the file `tck-tests.xml`
 
 * JUnit
 	* To build this project and run the TCK tests with JUnit execute the following command `mvn clean install -Pjunit`
-    * With JUnit the TCK tests are "unpacked" with the **maven-dependency-plugin**
+   * With JUnit the TCK tests are "unpacked" with the **maven-dependency-plugin**
